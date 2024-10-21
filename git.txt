@@ -1,0 +1,17 @@
+url origin : git remote get-url origin
+ดูวันเวลา author email ของ commit  : git log
+ดู local branch : git branch
+ดู remote branch : git branch -r
+ดู tag : git tag
+ดู commit เฉพาะ file: git log -- <file>
+ดู commit ของ merge pull request ทั้งหมด: git log --merges
+ดู commit ของ merge pull request เฉพาะ branch: git log --merges branch
+ดู commit จาก commit id ดูได้หมดว่าไฟล์เปลี่ยนยังไง ไฟล์ไหน : git show <commit id>
+ดู file ที่ถูก modified ใน tag 0.100.0 : git diff --name-only 0.100.0^ 0.100.0
+สร้าง tag ให้ commit id : git tag <tagname> <commit-id> ,-d delete
+
+
+
+
+
+
