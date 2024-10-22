@@ -48,3 +48,92 @@ git commit --amend --date="1987-08-03" ใช้เพื่อแก้ไข c
 -------------------------------------------------------------------------
 
 git reflog เป็นคำสั่งใน Git ที่ใช้สำหรับแสดงประวัติการอ้างอิง (reference) ของ HEAD ซึ่งช่วยให้คุณสามารถดูการเปลี่ยนแปลงที่เกิดขึ้นกับ HEAD และ branch ต่าง ๆ ได้ในช่วงเวลาที่ผ่านมา นี่คือรายละเอียดเกี่ยวกับการใช้งานคำสั่งนี้:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Task2
+cd /d/working
+
+mkdir m2
+cd m2
+git init
+
+git config user.name "Name Surname"
+git config user.email "xxxxxxxxxx@cn330"
+
+cp /d/working/m_xxxxxxxxxx/AUTHORS /d/working/m2/
+
+git add AUTHORS
+git commit -m "Initial commit"
+
+cd ..
+zip -r m2.zip m2
+
+cp /d/working/m2 /d/working/m_xxxxxxxxxx
+cd /d/working/m_xxxxxxxxxx
+git add m2.zip
+git commit -m "Complete Task 2"
+
+
+Task3
+cd /d/working/m_xxxxxxxxxx
+
+download repo_m3.zip to /d/working/
+
+Extract the file repo_m3.zip (outside yur cloned directory), e.g. /d/working/.
+
+cd /d/working/repo_m3
+
+create answer3 in /d/working/m_xxxxxxxxxx
+
+complete the exercises
+(latest 2 tag : git tag --sort=-creatordate | head -n 2)
+(first 2 tag : git tag --sort=creatordate | head -n 2)
+(requirement first add : git log -- requirements.txt)
+(requirement first commit : git log -- requirements.txt)
+(how many commit : git log --oneline -- requirements.txt)
+(name of author that latest commit on README.md : git log -1 -- README.md)
+(commit id of first merge pull request : git log --merges)
+(commit message of commit id : git log e68a68c97c136b75a963c9d5e77d552622384141)
+(file that mod in tag : git diff --name-only 0.100.0^ 0.100.0)
+(file that mod in commit id "xxx" write diff : git diff 46f5091c9f2e3c029d4aaecb43f95d5e01df6f30)
+(commit id when merge typing doc : git log --merges typing-doc)
+
+cd /d/working/m_xxxxxxxxxx
+
+git add answer3.md
+
+git commit -m "Complete Task 3"
+
+
+Task4
+set up like task2
+
+using : (git show) to see what file in each commit and move to m4
+git add
+git commit
+git tag
+
+
+Task 5
+git clone repo_m5 m5
+
+cd /d/working/m5
+
+git checkout -b function origin/function
